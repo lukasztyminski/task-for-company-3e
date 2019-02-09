@@ -66,7 +66,7 @@ const config = {
 							limit: 10000,
 							name: '[name].[ext]',
 							fallback: 'file-loader',
-							outputPath: 'public/fonts',
+							outputPath: 'task-for-company-3e/public/fonts',
 						},
 					},
 				],
