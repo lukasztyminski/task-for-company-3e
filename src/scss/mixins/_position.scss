@@ -1,0 +1,121 @@
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+// Translate 3D
+@mixin translate3d($move-x,$move-y,$move-z) {
+    transform: translateX($move-x);
+    transform: translateY($move-y);
+    transform: translateZ($move-z);
+}
+
+//Obrazy slidera
+@mixin bg-image($url){
+    background-image: url($url);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+// Padding dol - gora
+@mixin padding-top-bottom($p-top, $p-bottom){
+    padding-top: $p-top;
+    padding-bottom: $p-bottom;
+}
+
+
+@mixin position ($position: relative, $coordinates: 0 0 0 0) {
+    @if type-of($position) == list {
+        $coordinates: $position;
+        $position: relative;
+    }
+
+    $top: nth($coordinates, 1);
+    $right: nth($coordinates, 2);
+    $bottom: nth($coordinates, 3);
+    $left: nth($coordinates, 4);
+
+    position: $position;
+
+    @if $top == auto {
+        top: $top;
+    }
+    @else if not(unitless($top)) {
+        top: $top;
+    }
+    @if $right == auto {
+        right: $right;
+    }
+    @else if not(unitless($right)) {
+        right: $right;
+    }
+    @if $bottom == auto {
+        bottom: $bottom;
+    }
+    @else if not(unitless($bottom)) {
+        bottom: $bottom;
+    }
+    @if $left == auto {
+        left: $left;
+    }
+    @else if not(unitless($left)) {
+        left: $left;
+    }
+}
+
+
+@mixin fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+//wyśrodkowanie elementu absolutnie na 3 sposoby: w pionie (vertical), poziomie (horizontal) i całkowicie (both)
+@mixin center($position) {
+  position: absolute;
+
+  @if $position == 'vertical' {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  @else if $position == 'horizontal' {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+  }
+  @else if $position == 'both' {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+// wysrodkowanie elementu
+@mixin margin-auto {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+//clearfix - problem z wysokoscia kontenera
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@mixin inline-block {
+   display: inline-block;
+    *display: inline;
+    zoom: 1;
+}

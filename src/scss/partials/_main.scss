@@ -1,0 +1,76 @@
+.main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding: 0;
+}
+
+/* section galaxy */
+
+#resume #scene li {
+    width: 100%;
+    height: 100%;
+    img {
+        position: absolute;
+    }
+}
+
+
+.galaxy {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    @include bg-image('/public/iamges/image_1.jpg');
+    .hello h1 {
+        text-align: center;
+        text-shadow: -1px -1px 7px #000000;
+        color: #FFFFFF;
+        font-size: 4rem;
+        margin-top: 20rem;
+        z-index: 3;
+        font-family: 'pangolinregular', sans-serif;
+        @include screen('desktop'){
+            font-size: 6.5rem;
+        }
+        .hello__bold {
+            font-family: 'pangolinregular', sans-serif;
+            color: #FF0202;
+        }
+        .hello__future i{
+            color: #FF0202;
+            animation: heartbeat 1.5s infinite ease-in;
+        }
+    }
+    .planet {
+        bottom: 0;
+        img {
+            bottom: -48%;
+            left: 50%;
+            animation: rotationearth 4s infinite linear;
+            visibility: hidden;
+            @include screen('tablet'){
+                display: block;
+            }
+            @include screen('desktop'){
+                bottom: -246%;
+            }
+        }
+    }
+    .l1 img {
+        animation: heartbeat 1s infinite ease-in;
+        bottom: -177%;
+    }
+    .l2 img {
+        top: -44%;
+    }
+    .l5 img {
+        animation: starsmove 6s ease-in-out;
+        bottom: -141%;
+        left: 31%;
+    }
+
+}
+
+
+
+

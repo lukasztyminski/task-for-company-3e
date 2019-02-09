@@ -1,0 +1,13 @@
+//mixina do fontow z pliku, podajemy nazwe fontu i sciezke do pliku
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($file-name + '.eot');
+    src: url($file-name + '.eot?#iefix')  format('embedded-opentype'),
+         url($file-name + '.woff') format('woff'),
+         url($file-name + '.woff2') format('woff2'),
+         url($file-name + '.ttf')  format('truetype');
+    font-weight: $weight;
+    font-style: $style;
+  }
+ }

@@ -1,0 +1,116 @@
+@mixin overlay($bgColor: #000, $bgOpacity: 0.6){
+  &:after{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba($bgColor, $bgOpacity);
+    z-index: 0;
+   }
+}
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+}
+
+@mixin box-shadow($shadows...) {
+    box-shadow: $shadows;
+}
+
+@mixin text-shadow($color, $x: 1px, $y: 1px, $radius: 0, $invert: false) {
+
+    @if $invert {
+        $x: $x * (-1);
+        $y: $y * (-1);
+    }
+
+    text-shadow: $x $y $radius $color;
+}
+
+// Naglowki
+@mixin header-mixin($font-size, $font-weight){
+    font-size: $font-size;
+    font-weight: $font-weight;
+
+}
+
+// motyw kolorystyczny
+@mixin theme($name, $color) {
+  $primary: $color;
+  $secondary: lighten($color, 10%);
+  .#{$name} {
+    body {
+      color: $primary;
+    }
+    section {
+      background: $secondary;
+    }
+  }
+}
+
+//generowanie trojkata w 4 kierunkach
+@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false) {
+    width: 0;
+    height: 0;
+    @if $round {
+        border-radius: 3px;
+    }
+    @if $direction == down {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: $size solid $color;
+        margin-top: 0 - round( $size / 2.5 );
+    } @else if $direction == up {
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: $size solid $color;
+        margin-bottom: 0 - round( $size / 2.5 );
+    } @else if $direction == right {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+        margin-right: -$size;
+    } @else if  $direction == left {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+        margin-left: -$size;
+    }
+}
+
+//gradient
+@mixin background-gradient($start-color, $end-color, $orientation) {
+    background: $start-color;
+
+    @if $orientation == 'vertical' {
+      background: -webkit-linear-gradient(top, $start-color, $end-color);
+      background: linear-gradient(to bottom, $start-color, $end-color);
+    } @else if $orientation == 'horizontal' {
+      background: -webkit-linear-gradient(left, $start-color, $end-color);
+      background: linear-gradient(to right, $start-color, $end-color);
+    } @else {
+      background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+      background: radial-gradient(ellipse at center, $start-color, $end-color);
+    }
+}
+
+// Listy
+@mixin list-style-none {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+@mixin basic-border($width, $style, $color: $input-border-hover){
+    border-width: $width;
+    border-style: $style;
+    border-color: $color;
+}
+
+@mixin upper {
+    text-transform: uppercase;
+}
