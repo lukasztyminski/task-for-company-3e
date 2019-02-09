@@ -7,8 +7,8 @@
 Let's go!
 
 ```
-$ git clone https://github.com/lukasztyminski/Task-for-company-3e-software.git
-$ cd Task-for-company-3e-software
+$ git clone https://github.com/lukasztyminski/task-for-company-3e.git
+$ cd task-for-company-3e
 $ yarn // or npm install
 ```
 
@@ -32,7 +32,7 @@ $ npm run build
 
 Deploy to `gh-pages` branch on GitHub.
 
-**[DEMO](https://lukasztyminski.github.io/Task-for-company-3e-software)**
+**[DEMO](https://lukasztyminski.github.io/task-for-company-3e)**
 
 ```
 $ npm run deploy

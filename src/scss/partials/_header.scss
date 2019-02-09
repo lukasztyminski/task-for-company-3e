@@ -1,91 +1,12 @@
-#nav-down {
-  position: absolute;
-  display: inline-block;
-}
-
 .header {
-  @include fixed;
-  .nav {
-    position: relative;
-    .top-menu__content {
-      list-style: none;
-      width: 100%;
-      @include screen('tablet'){
-        float: right;
-        width: 72%;
-      }
 
-      .top-menu__content--link {
-        position: relative;
-        text-align: center;
-        display: block;
-        @include screen('tablet'){
-          float: left;
-        }
-        a {
-          display: block;
-          color: #FFFFFF;
-          text-decoration: none;
-          font-size: 1.7rem;
-          text-shadow: 1px 1px 1px #F83837;
-          @include basic-transition;
-          @include upper;
-          &:hover {
-            color: #F83837;
-            text-shadow: -1px -1px 2px #fff;
-          }
-          @include screen('tablet'){
-            font-size: 2.4rem;
-            padding: 1rem 1rem;
-            color: #F83837;
-          }
-          @media only screen and(min-width: 1300px){
-            font-size: 2.7rem;
-            padding: 1rem 2rem;
-          }
-        }
-
-      }
-    }
-  }
-}
-
-.top-menu {
-  display: none;
-  @include screen('tablet'){
-    display: block;
-  }
-}
-
-.slicknav_menu {
-  @include fixed;
-  background: rgba(237, 41, 42, 0.28) !important;
-  @include screen('tablet'){
-    display: none;
-  }
-  .slicknav_btn {
-    background: transparent;
-  }
 }
 
 
-.arrow-down {
-  margin-top: 10rem;
-  border: solid #FFFFFF;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 1.6rem;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  &:hover {
-    cursor: pointer;
-  }
-  @include screen('mobile'){
-    margin-top: 7rem;
-  }
-  @include screen('desktop'){
-    padding: 2.2rem;
-  }
+.head {
+	@extend %fa-icon;
+	@extend .far;
+	&:before {
+		content: fa-content($fa-var-user);
+	}
 }
-
-

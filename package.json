@@ -1,16 +1,16 @@
 {
-  "name": "task-for-company-3e-software",
+  "name": "task-for-company-3e",
   "license": "MIT",
   "author": "lukasztyminski",
-  "homepage": "https://lukasztyminski.github.io/Task-for-company-3e-software",
+  "homepage": "https://lukasztyminski.github.io/task-for-company-3e",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lukasztyminski/Task-for-company-3e-software/tree/master"
+    "url": "https://github.com/lukasztyminski/task-for-company-3e/tree/master"
   },
   "bugs": {
-    "url": "https://github.com/lukasztyminski/Task-for-company-3e-software/issues"
+    "url": "https://github.com/lukasztyminski/task-for-company-3e/issues"
   },
-  "version": "1.6.0",
+  "version": "1.1.0",
   "scripts": {
     "build": "webpack -p --progress --mode production --config webpack.config.js",
     "predeploy": "npm run build",
