@@ -1,4 +1,4 @@
-# Tusk for company 3e software house based on Boostrap + Webpack Boilerplate
+# Task for company 3e software house based on Boostrap + Webpack Boilerplate
 
 > Read and follow all of below instructions
 
