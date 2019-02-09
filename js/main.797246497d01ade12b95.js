@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{e6Wu:function(e,n,t){"use strict";t.r(n);t("SYky"),t("s75U");document.querySelector("#alert").addEventListener("click",function(){alert("practise")})},s75U:function(e,n,t){}},[["e6Wu",1,2]]]);
