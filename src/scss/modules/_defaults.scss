@@ -8,11 +8,18 @@ html {
   background: #FFFFFF;
 }
 body {
-  font: 400 1rem $fontFamily;
-  color: #4C4141;
-  transition: all .4s .3s ease-in;
+  font: 400 1.6rem $fontFamily;
+  color: $base;
+  background: #fbfbfb;
+  transition: $transition;
+  min-height: 100%
 }
-body,html{
-	min-height: 100vh;
-    overflow: hidden;
+
+.wrapper {
+	background: #e4e3e3;
+	box-shadow: 0px 0px 5px 0px #797676;
+	@include screen(large) {
+		max-width: 1140px;
+		margin: 0 auto;
+	}
 }

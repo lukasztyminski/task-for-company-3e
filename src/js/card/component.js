@@ -9,10 +9,28 @@ export class CardComponent extends HTMLElement {
 
 	async render() {
 		this.clean();
-		const card = document.createElement('card');
-		card.innerHTML = `<div>${(await getCard())}</div>`;
+		let card = document.createElement('card');
+		card.classList.add('card');
+		(await getCard()).forEach(item => {
+			card.innerHTML += `
+			<div class="card__item">
+				<div class="card__left">
+					<img src="public/images/84.png" class="card__left--img card-img-top" alt="image ${
+						item.name
+					}">
+				</div>
+				<div class="card__right">
+					<h5 class="card__title">${item.name}</h5>
+					<span class="card__price">$${item.price}</span>
+					<div class="card__rates">
+						<input type="radio" name="${item.rate}" id="" value="">
+						<label for=""></label>
+					</div>
+				</div>
+			</div>
+			`;
+		});
 		this.shadow.appendChild(card);
-		console.log((await getCard()));
 	}
 
 	clean() {

@@ -10,85 +10,154 @@
 </head>
 
 <body>
-	<!-- Header -->
-	<header class="header">
-		<div class="header__banner jumbotron-fluid">
+	<div class="wrapper">
+		<!-- Header -->
+		<header class="header">
+			<div class="header__banner">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-lg-6">
+							<!-- Logo -->
+							<div class="header__logo" itemscope itemtype="http://schema.org/Organization" id="logo">
+								<div class="header__logoIcon">
+									<i class="header__logoIcon--inner fas fa-th"></i>
+								</div>
+								<a href="/" itemprop="url" title="Product Catalogue">
+									<h1 class="header__logo--title" itemprop="logo">Product Catalogue</h1>
+								</a>
+							</div>
+							<!-- //Logo -->
+						</div>
+						<div class="col-12 col-lg-6">
+							<!-- Breadcrumbs -->
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item">Your are Here:<a href="#">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Product catalogue</li>
+								</ol>
+							</nav>
+							<!-- Breadcrumbs -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Header -->
+
+		<!-- Main -->
+		<main class="main">
+			<div class="container">
+				<div class="row">
+					<!-- MainLeftColumn -->
+					<div class="col-12 col-lg-8">
+						<form class="form-inline">
+							<label class="my-1 mr-2" for="inlineFormCustomSelectPref">Preference</label>
+							<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+								<option selected>Choose...</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+						</form>
+						<div class="card-columns">
+							<div class="card">
+								<img src="public/images/482x436.png" class="card-img-top" alt="">
+								<div class="card-body">
+									<h5 class="card-title">Card title</h5>
+									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+										content.
+										This content is a little bit longer.</p>
+								</div>
+								<div class="card-footer">
+									<small class="text-muted">Last updated 3 mins ago</small>
+								</div>
+							</div>
+							<div class="card">
+								<img src="public/images/482x436.png" class="card-img-top" alt="">
+								<div class="card-body">
+									<h5 class="card-title">Card title</h5>
+									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+										content.
+										This content is a little bit longer.</p>
+								</div>
+								<div class="card-footer">
+									<small class="text-muted">Last updated 3 mins ago</small>
+								</div>
+							</div>
+							<div class="card">
+								<img src="public/images/482x436.png" class="card-img-top" alt="">
+								<div class="card-body">
+									<h5 class="card-title">Card title</h5>
+									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+										content.
+										This content is a little bit longer.</p>
+								</div>
+								<div class="card-footer">
+									<small class="text-muted">Last updated 3 mins ago</small>
+								</div>
+							</div>
+							<div class="card">
+								<img src="public/images/482x436.png" class="card-img-top" alt="">
+								<div class="card-body">
+									<h5 class="card-title">Card title</h5>
+									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+										content.
+										This content is a little bit longer.</p>
+								</div>
+								<div class="card-footer">
+									<small class="text-muted">Last updated 3 mins ago</small>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!-- //MainLeftColumn -->
+
+					<!-- MainRightColumn -->
+					<aside class="aside col-12 col-lg-4">
+						<div class="card-columns">
+							<shooping-carts></shooping-carts>
+						</div>
+						<div class="aside__categories">
+							<div class="aside__title">
+								<i class="aside__title--icon fas fa-th"></i>
+								<h2 class="aside__title--text">Categories</h2>
+							</div>
+							<ul class="list-group">
+								<li class="list-group-item active">Cras justo odio</li>
+								<li class="list-group-item">Dapibus ac facilisis in</li>
+								<li class="list-group-item">Morbi leo risus</li>
+								<li class="list-group-item">Porta ac consectetur ac</li>
+								<li class="list-group-item">Vestibulum at eros</li>
+							</ul>
+						</div>
+					</aside>
+					<!-- //MainRightColumn -->
+				</div>
+			</div>
+		</main>
+		<!-- Main -->
+
+		<!-- Footer -->
+		<footer class="footer">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<div class="header__logo" itemscope itemtype="http://schema.org/Organization" id="logo">
-							<div class="header__logoIcon">
-								<span class="header__logoIcon--item"></span>
-								<span class="header__logoIcon--item"></span>
-								<span class="header__logoIcon--item"></span>
-								<span class="header__logoIcon--item"></span>
-								<span class="header__logoIcon--item"></span>
-								<span class="header__logoIcon--item"></span>
-								<span class="header__logoIcon--item"></span>
-								<span class="header__logoIcon--item"></span>
-								<span class="header__logoIcon--item"></span>
+						<div class="footer__inner">
+							<div class="footer__copyright">
+								<span>By &copy;</span>
+								<a href="https://github.com/lukasztyminski" target="_blank" rel="noopener noreferrer nofollow">Łukasz Tymiński</a>
 							</div>
-							<a href="/" itemprop="url" title="Product Catalogue">
-								<h1 class="header__logo--title" itemprop="logo">Product Catalogue</h1>
-							</a>
+							<div class="footer__socials">
+
+							</div>
 						</div>
-					</div>
-					<div class="col-12">
-						<i class="far fa-angry "></i>
-						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb">
-								<i class="head"></i>
-								<li class="breadcrumb-item"><a href="#">Home</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Library</li>
-							</ol>
-						</nav>
 					</div>
 				</div>
 			</div>
-		</div>
-	</header>
-	<!-- Header -->
-
-	<!-- Main -->
-	<main>
-		<div class="container">
-			<div class="row">
-				<div class="card-deck">
-					<tymon-card></tymon-card>
-				</div>
-					<!-- <div class="card">
-						<img src="public/images/482x436.png" class="card-img-top" alt="">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-								This content is a little bit longer.</p>
-						</div>
-						<div class="card-footer">
-							<small class="text-muted">Last updated 3 mins ago</small>
-						</div>
-					</div>
-					<div class="card">
-						<img src="public/images/482x436.png" class="card-img-top" alt="">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-						</div>
-						<div class="card-footer">
-							<small class="text-muted">Last updated 3 mins ago</small>
-						</div>
-					</div> -->
-
-				</div>
-			</div>
-		</div>
-	</main>
-	<!-- Main -->
-
-	<!-- Footer -->
-	<footer>
-
-	</footer>
-	<!-- Footer -->
+		</footer>
+		<!-- Footer -->
+	</div>
 
 </body>
 

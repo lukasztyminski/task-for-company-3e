@@ -1,13 +1,41 @@
 .header {
- background: url(../public/images/84.png) no-repeat center;
- background-size: cover;
-}
+	background: #F1F1F0;
+	padding: 2rem 0;
 
+	@include screen(large) {
+		padding: 2rem 4rem;
+	}
 
-.head {
-	@extend %fa-icon;
-	@extend .far;
-	&:before {
-		content: fa-content($fa-var-user);
+	.row {
+		align-items: center;
+	}
+
+	&__logo {
+		display: inline-flex;
+		align-items: center;
+
+		a {
+			text-decoration: none;
+			display: inline-flex;
+		}
+
+		&--title {
+			margin: 0;
+			text-transform: uppercase;
+			color: $base;
+			font: 900 3rem $latoBlack;
+		}
+	}
+
+	&__logoIcon {
+		background: $colorBg;
+		display: inline-flex;
+		padding: 3rem;
+
+		&--inner {
+			color: $cWhite;
+			font-size: 3.5rem;
+		}
 	}
 }
+

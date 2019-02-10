@@ -1,0 +1,8 @@
+.main {
+	background: $cWhite;
+	border-top: 2px solid #EBEBEB;
+	padding: 2rem;
+	@include screen(large) {
+		padding: 2rem 4rem;
+	}
+}

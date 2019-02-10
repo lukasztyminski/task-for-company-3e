@@ -1,3 +1,3 @@
 import { CardComponent } from './component';
 
-export default () => customElements.define('tymon-card', CardComponent);
+export default () => customElements.define('shooping-carts', CardComponent);
