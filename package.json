@@ -23,6 +23,7 @@
   "dependencies": {
     "bootstrap": "^4.2.1",
     "jquery": "^3.3.1",
+    "babel-polyfill": "^6.26.0",
     "popper.js": "^1.14.6"
   },
   "devDependencies": {

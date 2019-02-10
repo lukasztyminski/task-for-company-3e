@@ -12,7 +12,7 @@ const IS_DEV = process.env.NODE_ENV === 'dev';
 const config = {
 	mode: IS_DEV ? 'development' : 'production',
 	devtool: IS_DEV ? 'eval' : 'source-map',
-	entry: './src/js/index.js',
+	entry: './src/js/app.js',
 	output: {
 		filename: 'js/[name].[hash].js',
 		path: path.resolve(__dirname, 'dist'),
@@ -22,7 +22,12 @@ const config = {
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				loader: 'babel-loader',
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['@babel/preset-env'],
+					},
+				},
 			},
 			{
 				test: /\.scss$/,
