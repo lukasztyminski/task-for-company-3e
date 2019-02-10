@@ -8,7 +8,6 @@ const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const CssUrlRelativePlugin = require('css-url-relative-plugin');
 
 const IS_DEV = process.env.NODE_ENV === 'dev';
-const REPO_NAME = 'task-for-company-3e';
 
 const config = {
 	mode: IS_DEV ? 'development' : 'production',
@@ -61,14 +60,10 @@ const config = {
 				test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
 				use: [
 					{
-						loader: 'url-loader',
+						loader: 'file-loader',
 						options: {
 							limit: 10000,
 							name: '[name].[ext]',
-							fallback: 'file-loader',
-							outputPath: IS_DEV
-								? 'public/fonts'
-								: path.resolve(__dirname, 'public/fonts'),
 						},
 					},
 				],
