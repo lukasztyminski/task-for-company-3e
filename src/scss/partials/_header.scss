@@ -1,8 +1,16 @@
 .header {
 	background: #F1F1F0;
 	padding: 2rem 0;
-
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	border-top: 2px solid $cDark;
+	border-bottom: 2px solid $cDark;
 	@include screen(large) {
+		max-width: 1140px;
+		margin: 0 auto;
 		padding: 2rem 4rem;
 	}
 
@@ -23,7 +31,15 @@
 			margin: 0;
 			text-transform: uppercase;
 			color: $base;
-			font: 900 3rem $latoBlack;
+			font: 900 2.5rem $latoBlack;
+			padding-left: 2rem;
+			@include screen(mobile) {
+				font: 900 3rem $latoBlack;
+			}
+			@include screen(desktop) {
+				font: 900 5rem $latoBlack;
+    			line-height: .85;
+			}
 		}
 	}
 
@@ -39,3 +55,28 @@
 	}
 }
 
+.breadcrumb {
+	background: none;
+	padding: 2rem 0 0;
+	text-transform: uppercase;
+	border-radius: none;
+	display: flex;
+	justify-content: flex-end;
+	&__item {
+		&:first-child {
+			&::before {
+				content: '//';
+				margin-right: 2.5px;
+			}
+		}
+		&:last-child {
+			&::before {
+				content: '/';
+				margin: 0 2.5px;
+			}
+		}
+		a {
+			color: $colorBg;
+		}
+	}
+}

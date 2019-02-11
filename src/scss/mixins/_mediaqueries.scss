@@ -3,7 +3,7 @@
 	$large: "(min-width: 1200px)";
 	$desktop: "(min-width: 992px)";
 	$tablet: "(min-width: 768px)";
-	$mobile: "(min-width: 480px)";
+	$mobile: "(min-width: 576px)";
 	$webkit: "(-webkit-min-device-pixel-ratio:0)";
 
 	@if $size==large {

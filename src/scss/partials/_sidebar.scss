@@ -1,0 +1,272 @@
+#switchSidebar {
+	display: none;
+	&:checked {
+		+ .header__switchSidebar {
+			transform: translate3d(-100%, -11rem,0);
+			right: 1.5rem;
+			left: initial;
+			@extend %fa-icon;
+			@extend .fas;
+			color: $cDark;
+			&:hover {
+				color: $colorBg;
+			}
+			&::before {
+				content: fa-content($fa-var-times);
+				display: inline-flex;
+			}
+		}
+		~ .main {
+			.aside {
+				transform: translate3d(0, 0, 0);
+			}
+		}
+	}
+}
+
+
+
+.header__switchSidebar {
+	position: absolute;
+	@extend %fa-icon;
+	@extend .fas;
+	cursor: pointer;
+	top: 13.5rem;
+	font-size: 4rem;
+	left: 1.5rem;
+	transition: $transition;
+	z-index: 10000;
+	@include screen(tablet) {
+		display: none;
+	}
+	&::before {
+		content: fa-content($fa-var-bars);
+		display: inline-flex;
+	}
+}
+
+.aside {
+	position: absolute;
+	height: 100vh;
+	padding-top: 2rem;
+	background: $cWhite;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	transform: translate3d(-100%, 0, 0);
+	transition: $transition;
+	@include screen(tablet) {
+		height: initial;
+		position: initial;
+		padding-top: 0;
+		transform: translate3d(0, 0, 0);
+		background: initial;
+		z-index: initial;
+		transition: initial;
+	}
+	@include screen(desktop) {
+		padding-left: 4.5rem;
+	}
+
+	&__shoppingCart {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		@include screen(desktop) {
+			padding-top: 4rem;
+		}
+
+		.cards {
+			flex-direction: column;
+			width: 100%;
+			.card {
+				&__item {
+					display: flex;
+					align-items: center;
+					padding: 1rem 0;
+					border-bottom: 1px solid $cDark;
+					color: $cDark;
+					position: relative;
+					&:hover {
+						&::before {
+							@extend %fa-icon;
+							@extend .fas;
+							color: $colorBg;
+							content: fa-content($fa-var-times);
+							display: inline-flex;
+							position: absolute;
+							right: 5px;
+							top: 5px;
+							cursor: pointer;
+						}
+					}
+					&:first-child {
+						padding-top: 0;
+					}
+				}
+
+				&__left {
+					position: relative;
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					text-align: center;
+					margin-right: 1rem;
+					&--size {
+						font: 900 1.7rem $latoBlack;
+						@include center(both);
+					}
+				}
+
+				&__right {
+					padding: .5rem 0;
+					padding-left: 1rem;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: space-between;
+					border-left: 1px solid $cDark;
+					height: 84px;
+				}
+
+				&__title {
+					font-size: 1.4rem;
+					color: $colorBg;
+					margin: 0;
+					font: 400 1.4rem $fontFamily;
+				}
+
+				&__price {
+					font-size: 2rem;
+					font: 700 2rem $latoBold;
+					color: $cBtn;
+				}
+			}
+		}
+
+	}
+
+	&__shoppingCartTitle {
+		display: flex;
+		align-items: center;
+		padding-bottom: 2rem;
+		&--icon {
+			background: $colorBg;
+			width: 3rem;
+			height: 3rem;
+			color: $cWhite;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			&::before {
+				font-size: 1.3rem;
+			}
+		}
+
+		&--text {
+			margin: 0;
+			padding-left: 1rem;
+		}
+	}
+
+	&__resume {
+		display: flex;
+		align-items: center;
+		padding: 2rem 0;
+
+		&--total {
+			font-size: 1.8rem;
+		}
+
+		&--price {
+			color: $colorBg;
+		}
+	}
+
+	&__btns {
+		display: flex;
+		align-items: center;
+
+		&--href {
+			@include btn;
+			background: $colorBg;
+			border-color: $colorBg;
+			color: $cWhite;
+			height: 4rem;
+			text-decoration: none;
+			&:hover {
+				background: $cardBg;
+				border-color: $cBtn;
+				color: $cBtn;
+			}
+			&:last-child {
+				margin-left: 1rem;
+			}
+		}
+	}
+
+	&__categories {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		padding: 4rem 0 3rem;
+		&--icon {
+			background: $colorBg;
+			width: 3rem;
+			height: 3rem;
+			color: $cWhite;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			&::before {
+				font-size: 1.3rem;
+			}
+		}
+
+		&--text {
+			margin: 0;
+			padding-left: 1rem;
+		}
+	}
+
+	&__list {
+		width: 100%;
+		&--category {
+			padding: 1.5rem;
+			border: none;
+			border-radius: 0;
+			position: relative;
+			border-bottom: 1px solid $cDark;
+			color: $cBtn;
+			display: flex;
+			align-items: center;
+			font-family: $fontFamily;
+			&:first-child {
+				padding-top: 0;
+			}
+			&::before {
+				@extend %fa-icon;
+				@extend .fas;
+				position: absolute;
+				left: 0;
+				content: fa-content($fa-var-angle-right);
+				cursor: pointer;
+				z-index: 1;
+			}
+			&:hover {
+				color: $colorBg;
+			}
+			h3 {
+				margin: 0;
+			}
+		}
+	}
+}

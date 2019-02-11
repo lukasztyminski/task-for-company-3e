@@ -1,10 +1,20 @@
+/* Font vars */
+
 $fontFamily: 'Lato', sans-serif;
 $latoBlack: 'LatoBlack', sans-serif;
 $latoBold: 'LatoBold', sans-serif;
+
+/* Color vars */
+
 $base : #000000;
 $darken : darken(#F7F6F0 , 30%);
 $back: darken(#F7F6F0, 40%);
 $colorBg: #D94728;
 $cWhite: #FFFFFF;
+$cYellow: #F9B700;
+$cDark: #CCCCCC;
+$cardBg: #F4F4F4;
+$cBtn: #8a8a8a;
 
+/* Other vars */
 $transition: .3s;

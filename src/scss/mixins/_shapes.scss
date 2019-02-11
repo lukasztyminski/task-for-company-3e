@@ -11,6 +11,33 @@
    }
 }
 
+@mixin btn($c: $cBtn, $bg: $cardBg, $bc: $cBtn, $fs: 1.3rem) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	min-height: 4.3rem;
+	background: $bg;
+	font-size: $fs;
+	color: $c;
+	border: 2px solid $bc;
+	transition: $transition;
+	padding: 0 1rem;
+	cursor: pointer;
+	text-decoration: none;
+	i {
+		display: inline-flex;
+		padding-right: 1rem;
+		font-size: 1.2rem;
+	}
+
+	&:hover {
+		background: $colorBg;
+		border-color: $colorBg;
+		color: $cWhite;
+	}
+}
+
 @mixin border-radius($radius) {
     border-radius: $radius;
     -moz-border-radius: $radius;

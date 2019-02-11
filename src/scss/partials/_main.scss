@@ -1,8 +1,217 @@
 .main {
 	background: $cWhite;
-	border-top: 2px solid #EBEBEB;
-	padding: 2rem;
+	padding-top: 20rem;
 	@include screen(large) {
-		padding: 2rem 4rem;
+		padding: 13.5rem 4rem 0 4rem;
 	}
 }
+
+.sortForm {
+	padding: 4rem 0;
+	justify-content: center;
+	@include screen(desktop) {
+		justify-content: flex-start;
+	}
+	&__content {
+		display: inline-flex;
+		align-items: center;
+
+		&:last-child {
+			margin-top: 2rem;
+
+			@include screen((min-width: 400px)) {
+				margin: 0 0 0 2rem;
+			}
+		}
+	}
+
+	&__name {
+		margin: 0 .5rem 0;
+	}
+
+	&__choice {
+		padding: 1rem;
+		border-radius: 2px;
+	}
+
+	&__icon {
+		color: $cDark;
+		font-size: 2.5rem;
+		padding-left: 1rem;
+	}
+
+}
+
+.cards {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	@include screen(tablet) {
+		justify-content: space-between;
+	}
+	@include screen(large) {
+		column-gap: 2.5rem;
+	}
+
+	.card {
+		border: 2px solid rgba(0, 0, 0, 0.125);
+		position: relative;
+		background: $cardBg;
+		border-radius: 0;
+		margin-bottom: 4rem;
+		@include screen(tablet) {
+			flex: 0 0 48%;
+		}
+		&:hover {
+			border-color: $colorBg;
+			border-width: 3px;
+
+		}
+		&.sale {
+			&:hover {
+				&::before {
+					content: 'On Sale!';
+					transition: .3s;
+					position: absolute;
+					top: -6px;
+					right: 0.5rem;
+					background: $colorBg;
+					padding: 1rem;
+					font: 400 2rem $latoBold;
+					color: $cWhite;
+					z-index: 1;
+				}
+			}
+
+		}
+
+		&__top {
+			position: relative;
+
+			&--size {
+				font: 900 3rem $latoBlack;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				@include center(both);
+			}
+		}
+
+		&__rates {
+			display: flex;
+			align-items: center;
+			flex-direction: row-reverse;
+
+			input {
+				position: absolute;
+				left: -99999px;
+
+				&:checked~label {
+					color: $cYellow;
+					@extend .fas;
+				}
+			}
+
+			label {
+				cursor: pointer;
+				@extend %fa-icon;
+				@extend .far;
+				color: $cYellow;
+				font-size: 1.6rem;
+				margin-right: 2px;
+
+				&[for="star5"] {
+					margin-right: 0;
+				}
+
+				&::before {
+					content: fa-content($fa-var-star);
+					display: inline-flex;
+				}
+
+				&:hover,
+				&:hover~label {
+					color: $cYellow;
+					@extend .fas;
+				}
+			}
+		}
+
+		&__prices {
+			display: flex;
+			align-items: flex-start;
+
+			&--old {
+				color: $cBtn;
+				text-decoration: line-through;
+				font-size: 2.3rem;
+				padding-right: 1rem;
+			}
+
+			&--sale {
+				font: 700 3rem $latoBold;
+			}
+		}
+
+		&__amount {
+			justify-content: space-between;
+		}
+
+		&__info {
+			padding: 2rem;;
+			&--title {
+				margin: 0;
+				padding: 1rem 0;
+				text-transform: uppercase;
+			}
+		}
+
+		&__bottom {
+			border-top: 1px solid $cDark;
+			margin: 0 2rem;
+			padding: 2rem 0;
+			background: inherit;
+			border-radius: 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&__bottomLinks {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+
+			&--href {
+				font-size: 1.4rem;
+				color: $colorBg;
+				&:first-child {
+					margin-bottom: 1rem;
+				}
+				&:focus, &:hover, &:active {
+					color: $colorBg;
+					text-decoration: none;
+				}
+			}
+		}
+
+		&__bottomBtn {
+			@include btn;
+
+			&--icon {
+				font-size: 1.2rem;
+				display: inline-flex;
+				padding-right: 1rem;
+				height: 8px;
+			}
+
+			&--title {
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+
+

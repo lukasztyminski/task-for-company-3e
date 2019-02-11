@@ -1,25 +1,45 @@
 * {
-  box-sizing: border-box;
-  font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+	box-sizing: border-box;
+	text-rendering: optimizeLegibility;
+
+	&:focus,
+	&:hover,
+	&:active {
+		outline: none;
+	}
 }
+
 html {
-  font-size: 62.5%;
-  background: #FFFFFF;
+	font-size: 62.5%;
+	background: #FFFFFF;
 }
+
 body {
-  font: 400 1.6rem $fontFamily;
-  color: $base;
-  background: #fbfbfb;
-  transition: $transition;
-  min-height: 100%
+	font: 400 1.6rem $fontFamily;
+	color: $base;
+	background: #fbfbfb;
+	transition: $transition;
+	min-height: 100%
 }
 
 .wrapper {
 	background: #e4e3e3;
 	box-shadow: 0px 0px 5px 0px #797676;
+
 	@include screen(large) {
 		max-width: 1140px;
 		margin: 0 auto;
+	}
+}
+
+:host {
+	shooping-carts {
+		display: flex;
+	}
+}
+
+a {
+	&:hover {
+		text-decoration: none;
 	}
 }

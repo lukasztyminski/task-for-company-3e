@@ -1,3 +1,17 @@
 .footer {
-
+	background: $cardBg;
+	padding: 4rem;
+	text-transform: uppercase;
+	font: 700 2rem $latoBold;
+	border-top: 2px solid $cDark;
+	border-bottom: 2px solid $cDark;
+	a {
+		color: $colorBg;
+		transition: .3s;
+		&:focus,
+		&:hover,
+		&:active {
+			color: $cYellow;
+		}
+	}
 }
