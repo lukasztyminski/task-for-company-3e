@@ -21,6 +21,7 @@
     "start": "npm run dev"
   },
   "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.7",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.2.1",
     "jquery": "^3.3.1",
