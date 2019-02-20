@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/apple-touch-startup-image-768x1004.png"
   },
   {
-    "revision": "5d471fe396689a167799",
+    "revision": "e7204c9c784b1780d848",
     "url": "css/0.css"
   },
   {
@@ -32,26 +32,26 @@ self.__precacheManifest = [
     "url": "public/fonts/fa-regular-400.svg"
   },
   {
-    "url": "js/runtime.46a6b41790eeccd86682.js"
+    "url": "js/runtime.660681da6c01e7f743f5.js"
   },
   {
     "revision": "9a52a4e971938c52d6c541b9bf3dc2ec",
     "url": "public/fonts/fa-solid-900.eot"
   },
   {
-    "url": "js/vendor.46a6b41790eeccd86682.js"
+    "url": "js/vendor.660681da6c01e7f743f5.js"
   },
   {
     "revision": "fcb220ee57704c9c80680153bada946c",
     "url": "public/fonts/fa-regular-400.ttf"
   },
   {
-    "revision": "72f15fa766bc05a4b3ecaa8579763f85",
-    "url": "public/fonts/fa-regular-400.woff"
-  },
-  {
     "revision": "6a9d786e67d54419d8629081fbb555d6",
     "url": "public/fonts/fa-regular-400.woff2"
+  },
+  {
+    "revision": "72f15fa766bc05a4b3ecaa8579763f85",
+    "url": "public/fonts/fa-regular-400.woff"
   },
   {
     "revision": "80efa56be5eaebd06ea34f1adbad071c",
@@ -62,7 +62,7 @@ self.__precacheManifest = [
     "url": "iconstats.json"
   },
   {
-    "url": "js/main.46a6b41790eeccd86682.js"
+    "url": "js/main.660681da6c01e7f743f5.js"
   },
   {
     "revision": "66e81d91e452971fd09c8227794b4af9",
