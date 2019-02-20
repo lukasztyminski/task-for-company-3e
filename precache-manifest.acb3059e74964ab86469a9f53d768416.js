@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "72f15fa766bc05a4b3ecaa8579763f85",
-    "url": "public/fonts/fa-regular-400.woff"
+    "revision": "fcb220ee57704c9c80680153bada946c",
+    "url": "public/fonts/fa-regular-400.ttf"
   },
   {
     "revision": "c8ea4c79af12c22b2b6073999137156c",
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "public/fonts/fa-regular-400.woff2"
   },
   {
-    "revision": "fcb220ee57704c9c80680153bada946c",
-    "url": "public/fonts/fa-regular-400.ttf"
+    "revision": "72f15fa766bc05a4b3ecaa8579763f85",
+    "url": "public/fonts/fa-regular-400.woff"
   },
   {
     "revision": "304f31f4585cf09768f9d4d69574d2d6",
@@ -40,16 +40,16 @@ self.__precacheManifest = [
     "url": "public/fonts/fa-regular-400.eot"
   },
   {
-    "url": "js/vendor.eaa8bab80c9f879fe225.js"
+    "url": "js/vendor.d3915544afff85d70395.js"
   },
   {
-    "url": "js/runtime.eaa8bab80c9f879fe225.js"
+    "url": "js/runtime.d3915544afff85d70395.js"
   },
   {
-    "url": "js/main.eaa8bab80c9f879fe225.js"
+    "url": "js/main.d3915544afff85d70395.js"
   },
   {
-    "revision": "b43b0708f68e05e25ef0",
+    "revision": "27766acea242821579b3",
     "url": "css/0.css"
   }
 ];
