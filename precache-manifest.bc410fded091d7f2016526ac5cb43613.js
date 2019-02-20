@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "3638e62ea50e6f5859b6a15276c25c87",
-    "url": "public/fonts/fa-solid-900.woff2"
+    "revision": "fcb220ee57704c9c80680153bada946c",
+    "url": "public/fonts/fa-regular-400.ttf"
   },
   {
     "revision": "c8ea4c79af12c22b2b6073999137156c",
@@ -16,6 +16,10 @@ self.__precacheManifest = [
     "url": "public/fonts/fa-solid-900.woff"
   },
   {
+    "revision": "3638e62ea50e6f5859b6a15276c25c87",
+    "url": "public/fonts/fa-solid-900.woff2"
+  },
+  {
     "revision": "9a52a4e971938c52d6c541b9bf3dc2ec",
     "url": "public/fonts/fa-solid-900.eot"
   },
@@ -28,10 +32,6 @@ self.__precacheManifest = [
     "url": "public/fonts/fa-regular-400.woff"
   },
   {
-    "revision": "fcb220ee57704c9c80680153bada946c",
-    "url": "public/fonts/fa-regular-400.ttf"
-  },
-  {
     "revision": "304f31f4585cf09768f9d4d69574d2d6",
     "url": "public/fonts/fa-regular-400.svg"
   },
@@ -40,13 +40,13 @@ self.__precacheManifest = [
     "url": "public/fonts/fa-regular-400.eot"
   },
   {
-    "url": "js/vendor.a0f42d54afd7167b880a.js"
+    "url": "js/vendor.441912c1ee0e601f01d2.js"
   },
   {
-    "url": "js/runtime.a0f42d54afd7167b880a.js"
+    "url": "js/runtime.441912c1ee0e601f01d2.js"
   },
   {
-    "url": "js/main.a0f42d54afd7167b880a.js"
+    "url": "js/main.441912c1ee0e601f01d2.js"
   },
   {
     "revision": "e4604a9440a261097547",
